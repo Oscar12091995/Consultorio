@@ -1,0 +1,257 @@
+:root{
+	--colorA:#6190E8;
+    --colorB: #A7BFE8;
+
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background:gainsboro;
+	/* background: #000; */
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.container .column{
+	width: 25%;
+	height: 100%;
+	float: left;
+	border-right: 2px solid rgba(0,0,0,.5);
+	box-sizing: border-box;
+	z-index:1;
+}
+.container .column:last-child{
+	border-right: none;
+}
+.container .column .content{
+	position: relative;
+	height: 100%;
+}
+.container .column .content h1 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	background: rgba(0,0,0,.1);
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color:rgba(255,255,255,.2);
+	font-size: 15em;
+	border-top: 2px solid rgba(0,0,0,.5);
+	border-bottom: 2px solid rgba(0,0,0,.5);
+}
+
+.container .column .content .box{
+	position: absolute;
+	top: 50%;
+	transform: translateY(100%);
+	box-sizing: border-box;
+	padding: 40px;
+	background: rgba(255,255,255,1);
+	text-align: center;
+	transition: 0.5s;
+	opacity: 0;
+	
+	
+}
+.container .column.active .content .box{
+	opacity: 1;
+	transform: translateY(-50%);
+	background: var(--ColorB);
+    background: -webkit-repeating-linear-gradient(to rigth, var(--colorB), var(--colorA));
+    background: linear-gradient(to left, var(--colorA), var(--colorB))
+
+}
+.container .column .content .box h2{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	color: black;
+}
+.container .column .content .box p{
+	color: black;
+	font-size: 18px;
+}
+.container .column .bg{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: -1;
+}
+
+.container .column.active .bg.bg1{
+	 /* background:darkseagreen;  */
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4xSbN-11QR54-TwcHoCgdS37w_bqlkLO20mhN4icPSGXDlY11);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	transition: 0.5s
+}
+.container .column.active .bg.bg2{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4A4qd0zF4baP7DnH9fGSoEa8XKDF1xbnE7hZowBXXAO90Ps3E);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	transition: 0.5s
+}
+.container .column.active .bg.bg3{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFR3R62WPpeS64rQ54WCOPDSaHckdpnBZI2pa8JOHudzRXnATJ);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	transition: 0.5s
+}
+.container .column.active .bg.bg4{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTeHTcXaji5ABPgPhU2OhOE1QT5qFn9Ffmv3FQTa6ghpEqUSar3);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	transition: 0.5s
+}
+
+.btn-form{
+	border-radius     : 0;
+	display: inline-block;
+	width  : 11%;
+	border: 0.5px solid black;
+	border-radius: 15px;
+	
+	-webkit-transition: all 0.8s;
+	transition        : all 0.8s;
+	margin            : 10px 0px 10px 0px;
+}
+.btn-primary{
+	border-radius     : 0;
+	display: inline-flex;
+	
+	float: left;
+	width  : 6%;
+	border: 0.5px solid black;
+	border-radius: 15px;
+	
+	-webkit-transition: all 0.8s;
+	transition        : all 0.8s;
+	margin            : 10px 10px 10px 10px;
+	
+}
+
+.btn-form:hover{
+	border-bottom: red;
+	transition: 0.5s;
+}
+
+.btn-form:hover:focus{
+	background: blueviolet;
+}
+
+.btn-form:focus{
+	box-shadow: crimson;
+}
+div.formulario > form > div.pie{
+	border    : 0px solid black;
+	margin    : 0px,0px,0px,10px;
+	padding   : 0px 10px 0px 12px;
+	text-align: right;
+}
+
+div.formulario > form > div.encabezado{
+	margin    : 0px,0px,7px;
+	padding   : 7px 0px 7px 7px;
+	border    : 0px solid;
+	border-radius: 12%;
+	background: lavender;
+	color     : black;
+	font-size : 15px;
+}
+.sombra{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align: center;
+	font-size: 15px;
+	margin: px 100px 0px 100px;
+	width: auto;
+	position: relative;
+	padding: 10px;
+}
+
+h3.tPrincipal{
+	font-weight:normal; 
+}
+@media (max-width: 768px) {
+	h3.tPrincipal{
+		text-align: center;
+		font-size : 16px; 
+	}
+}
+h3{
+	margin-top : 14px;
+	font-size  : 30px;
+	font-weight: bold; 
+	color      : Black;
+	position: center;
+	text-align: center;
+}
+
+.nivel1{
+	background: red;
+	
+	margin: 15px;
+	display: block;
+	text-align: center;
+	
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	font-size: 25px;
+}
+.nivel2{
+	background: orange;
+	margin: 15px;
+	display: block;
+	text-align: center;
+	
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	font-size: 25px;
+}
+.nivel3{
+	background: yellow;
+	margin: 15px;
+	display: block;
+	text-align: center;
+	
+	color: black;
+	font-weight: bold;
+	padding: 15px;
+	font-size: 25px;
+}
+.nivel4{
+	background: green;
+	margin: 15px;
+	display: block;
+	text-align: center;
+	
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	font-size: 25px;
+}
+.nivel5{
+	background: #00AAe4;
+	color: black;
+	margin: 15px;
+	display: block;
+	text-align: center;
+	
+	
+	font-weight: bold;
+	padding: 15px;
+	font-size: 25px;
+}
